@@ -1,0 +1,57 @@
+<div
+    class="container"
+    ng-app="challengesApp"
+    ng-controller="hide_view_solutionsCtrl"
+    ng-init="init()"
+>
+  
+          
+<h2>List of challenges</h2>
+
+<button
+type="button"
+class="btn btn-primary"
+ng-click="showchallenges()"
+
+>  List challanges
+</button>
+
+<div >
+    <ul>
+      <li ng-repeat="challenge in challengess">
+        {{ challenge.name }}
+        <ul>
+          <li ng-repeat="challengename in challenge.challenges">
+            {{ challengename.name }}
+            <input
+              type="checkbox"
+              id="{{ challengename.id }}"
+              name="{{ challengename.id }}"
+              value="{{ challengename.id }}"
+            />
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <button
+      type="button"
+      class="btn btn-primary"
+      ng-click="okk()"
+      
+    >
+      ok
+    </button>
+  </div>
+</div>
+
+
+
+
+
+
+
+   
+            
+
+ 
+    
